@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free YouTube SEO tools to optimize your videos - title generator, description writer, hashtag suggestions, and more to grow your channel.">
+    <meta name="keywords" content="YouTube SEO, video optimization, title generator, description writer, hashtag generator, YouTube tools">
+    <meta property="og:title" content="YouTube SEO Assistant - 10+ Free Tools for Creators">
+    <meta property="og:description" content="Optimize your YouTube videos with our free SEO tools - generate titles, descriptions, tags, and more to grow your channel.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourseotools.com">
+    <meta property="og:image" content="https://yourseotools.com/images/og-image.jpg">
+    <title>YouTube SEO Assistant - 10+ Free Tools for Creators</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff0000;
+            --primary-dark: #cc0000;
+            --dark: #0f0f0f;
+            --dark-light: #222222;
+            --gray: #717171;
+            --light: #f1f1f1;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--dark-light);
+            padding: 15px 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 30px;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Ad Banner */
+        .ad-banner {
+            background-color: var(--dark-light);
+            padding: 15px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: var(--radius);
+        }
+
+        .ad-banner p {
+            color: var(--gray);
+            margin-bottom: 10px;
+        }
+
+        /* Main Content */
+        main {
+            padding: 30px 0;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .hero p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+
+        .search-bar {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: var(--radius);
+            border: none;
+            background-color: var(--dark-light);
+            color: var(--light);
+            font-size: 1rem;
+        }
+
+        .search-bar input::placeholder {
+            color: var(--gray);
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+        }
+
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .tool-card {
+            background-color: var(--dark-light);
+            border-radius: var(--radius);
+            padding: 20px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .tool-card i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .tool-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+
+        .tool-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Tool Content */
+        .tool-content {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .tool-content.active {
+            display: block;
+        }
+
+        .tool-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .tool-header h2 {
+            font-size: 1.8rem;
+            color: var(--white);
+        }
+
+        .back-btn {
+            background-color: var(--dark-light);
+            color: var(--light);
+            border: none;
+            padding: 8px 15px;
+            border-radius: var(--radius);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+
+        .back-btn:hover {
+            background-color: var(--primary);
+        }
+
+        .tool-container {
+            background-color: var(--dark-light);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--light);
+        }
+
+        .input-group input,
+        .input-group textarea,
+        .input-group select {
+            width: 100%;
+            padding: 10px 15px;
+            border-radius: var(--radius);
+            border: 1px solid var(--gray);
+            background-color: var(--dark);
+            color: var(--light);
+            font-family: inherit;
+        }
+
+        .input-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .generate-btn {
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 20px;
+        }
+
+        .generate-btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .result-container {
+            background-color: var(--dark);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .result-container h3 {
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .result-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .copy-btn,
+        .generate-again-btn {
+            padding: 8px 15px;
+            border-radius: var(--radius);
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .copy-btn {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .copy-btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .generate-again-btn {
+            background-color: var(--dark-light);
+            color: var(--light);
+        }
+
+        .generate-again-btn:hover {
+            background-color: var(--gray);
+        }
+
+        /* Sidebar Layout */
+        .content-wrapper {
+            display: flex;
+            gap: 30px;
+        }
+
+        .main-content {
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 300px;
+        }
+
+        .sidebar-widget {
+            background-color: var(--dark-light);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-widget h3 {
+            margin-bottom: 15px;
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        .popular-tools ul {
+            list-style: none;
+        }
+
+        .popular-tools li {
+            margin-bottom: 10px;
+        }
+
+        .popular-tools a {
+            color: var(--light);
+            text-decoration: none;
+            transition: var(--transition);
+            display: block;
+            padding: 8px 0;
+        }
+
+        .popular-tools a:hover {
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-light);
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-column h3 {
+            color: var(--white);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray);
+            color: var(--gray);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .sidebar-widget {
+                text-align: center;
+            }
+
+            .popular-tools ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .tool-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fab fa-youtube"></i>
+                <h1>YouTube <span>SEO</span> Assistant</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Tools</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="ad-banner">
+            <p>Advertisement</p>
+            <!-- Google AdSense Banner Ad -->
+            <div id="top-banner-ad">
+                <!-- AdSense code will be inserted here -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+                    crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                    data-ad-slot="XXXXXXXXXX"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Boost Your YouTube Growth with Our Free SEO Tools</h2>
+            <p>Generate optimized titles, descriptions, tags, and more to increase your video's visibility and reach more viewers.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for a tool...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </section>
+
+        <div class="content-wrapper">
+            <div class="main-content">
+                <div id="tools-home">
+                    <h2>All Tools</h2>
+                    <div class="tools-grid">
+                        <!-- Tool Cards -->
+                        <div class="tool-card" data-tool="title-generator">
+                            <i class="fas fa-heading"></i>
+                            <h3>Title Generator</h3>
+                            <p>Create catchy, SEO-optimized titles for your YouTube videos to attract more viewers.</p>
+                        </div>
+
+                        <div class="tool-card" data-tool="description-writer">
+                            <i class="fas fa-align-left"></i>
+                            <h3>Description Writer</h3>
+                            <p>Generate comprehensive video descriptions with keywords and links to boost SEO.</p>
+                        </div>
+
+                        <div class="tool-card" data-tool="hashtag-generator">
+                            <i class="fas fa-hashtag"></i>
+                            <h3>Hashtag Generator</h3>
+                            <p>Find the best hashtags to increase your video's discoverability on YouTube.</p>
+                        </div>
+
+                        <div class="tool-card" data-tool="tag-extractor">
+                            <i class="fas fa-tags"></i>
+                            <h3>Tag Extractor</h3>
+                            <p>Extract relevant tags from competitor videos to optimize your own content.</p>
+                        </div>
+
+                        <div class="tool-card" data-tool="channel-name-generator">
+                            <i class="fas fa-user-circle"></i>
+                            <h3>Channel Name Generator</h3>
+                            <p>Find the perfect name for your YouTube channel that's memorable and brandable.</p>
+                        </div>
+
+                        <div class="tool-card" data-tool="video-idea-generator">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Video Idea Generator</h3>
+                            <p>Get creative video ideas tailored to your niche that your audience will love.</p>
+                        </div>
+
+                        <div class="tool-card" data-tool="seo-score-checker">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>SEO Score Checker</h3>
+                            <p>Analyze your video's SEO strength and get actionable improvement suggestions.</p>
+                        </div>
+
+                        <div class="tool-card" data-tool="upload-time-optimizer">
+                            <i class="fas fa-clock"></i>
+                            <h3>Upload Time Optimizer</h3>
+                            <p>Discover the best times to publish videos for maximum engagement in your niche.</p>
+                        </div>
+
+                        <div class="tool-card" data-tool="script-intro-generator">
+                            <i class="fas fa-scroll"></i>
+                            <h3>Script Intro Generator</h3>
+                            <p>Create compelling video intros that hook viewers in the first few seconds.</p>
+                        </div>
+
+                        <div class="tool-card" data-tool="thumbnail-text-suggester">
+                            <i class="fas fa-image"></i>
+                            <h3>Thumbnail Text Suggester</h3>
+                            <p>Generate attention-grabbing text overlays for your video thumbnails.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tool Content Sections (Initially Hidden) -->
+                <div id="tool-content-container">
+                    <!-- Title Generator Tool -->
+                    <div class="tool-content" id="title-generator">
+                        <div class="tool-header">
+                            <h2><i class="fas fa-heading"></i> YouTube Title Generator</h2>
+                            <button class="back-btn"><i class="fas fa-arrow-left"></i> Back to Tools</button>
+                        </div>
+                        <div class="tool-container">
+                            <div class="input-group">
+                                <label for="title-keywords">Main Keywords/Topic</label>
+                                <input type="text" id="title-keywords" placeholder="e.g., vegan recipes, gaming tutorial">
+                            </div>
+                            <div class="input-group">
+                                <label for="title-tone">Tone/Style</label>
+                                <select id="title-tone">
+                                    <option value="informative">Informative</option>
+                                    <option value="clickbait">Clickbait</option>
+                                    <option value="question">Question</option>
+                                    <option value="list">List</option>
+                                    <option value="howto">How-to</option>
+                                </select>
+                            </div>
+                            <button class="generate-btn" id="generate-titles">Generate Titles</button>
+                            <div class="result-container" id="title-results" style="display: none;">
+                                <h3>Suggested Titles:</h3>
+                                <div id="title-output"></div>
+                                <div class="result-actions">
+                                    <button class="copy-btn" id="copy-titles">Copy All</button>
+                                    <button class="generate-again-btn">Generate Again</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description Writer Tool -->
+                    <div class="tool-content" id="description-writer">
+                        <div class="tool-header">
+                            <h2><i class="fas fa-align-left"></i> YouTube Description Writer</h2>
+                            <button class="back-btn"><i class="fas fa-arrow-left"></i> Back to Tools</button>
+                        </div>
+                        <div class="tool-container">
+                            <div class="input-group">
+                                <label for="desc-keywords">Video Topic/Keywords</label>
+                                <input type="text" id="desc-keywords" placeholder="e.g., smartphone review, workout routine">
+                            </div>
+                            <div class="input-group">
+                                <label for="desc-details">Additional Details (optional)</label>
+                                <textarea id="desc-details" placeholder="Any specific points to include, links, timestamps, etc."></textarea>
+                            </div>
+                            <button class="generate-btn" id="generate-description">Generate Description</button>
+                            <div class="result-container" id="description-results" style="display: none;">
+                                <h3>Optimized Description:</h3>
+                                <div id="description-output"></div>
+                                <div class="result-actions">
+                                    <button class="copy-btn" id="copy-description">Copy Description</button>
+                                    <button class="generate-again-btn">Generate Again</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hashtag Generator Tool -->
+                    <div class="tool-content" id="hashtag-generator">
+                        <div class="tool-header">
+                            <h2><i class="fas fa-hashtag"></i> YouTube Hashtag Generator</h2>
+                            <button class="back-btn"><i class="fas fa-arrow-left"></i> Back to Tools</button>
+                        </div>
+                        <div class="tool-container">
+                            <div class="input-group">
+                                <label for="hashtag-topic">Video Topic/Niche</label>
+                                <input type="text" id="hashtag-topic" placeholder="e.g., travel vlog, tech review">
+                            </div>
+                            <div class="input-group">
+                                <label for="hashtag-count">Number of Hashtags</label>
+                                <select id="hashtag-count">
+                                    <option value="5">5</option>
+                                    <option value="10" selected>10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                </select>
+                            </div>
+                            <button class="generate-btn" id="generate-hashtags">Generate Hashtags</button>
+                            <div class="result-container" id="hashtag-results" style="display: none;">
+                                <h3>Suggested Hashtags:</h3>
+                                <div id="hashtag-output"></div>
+                                <div class="result-actions">
+                                    <button class="copy-btn" id="copy-hashtags">Copy Hashtags</button>
+                                    <button class="generate-again-btn">Generate Again</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tag Extractor Tool -->
+                    <div class="tool-content" id="tag-extractor">
+                        <div class="tool-header">
+                            <h2><i class="fas fa-tags"></i> YouTube Tag Extractor</h2>
+                            <button class="back-btn"><i class="fas fa-arrow-left"></i> Back to Tools</button>
+                        </div>
+                        <div class="tool-container">
+                            <div class="input-group">
+                                <label for="video-url">YouTube Video URL</label>
+                                <input type="text" id="video-url" placeholder="https://www.youtube.com/watch?v=...">
+                            </div>
+                            <button class="generate-btn" id="extract-tags">Extract Tags</button>
+                            <div class="result-container" id="tag-results" style="display: none;">
+                                <h3>Extracted Tags:</h3>
+                                <div id="tag-output"></div>
+                                <div class="result-actions">
+                                    <button class="copy-btn" id="copy-tags">Copy Tags</button>
+                                    <button class="generate-again-btn">Generate Again</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Channel Name Generator Tool -->
+                    <div class="tool-content" id="channel-name-generator">
+                        <div class="tool-header">
+                            <h2><i class="fas fa-user-circle"></i> YouTube Channel Name Generator</h2>
+                            <button class="back-btn"><i class="fas fa-arrow-left"></i> Back to Tools</button>
+                        </div>
+                        <div class="tool-container">
+                            <div class="input-group">
+                                <label for="channel-niche">Channel Niche/Theme</label>
+                                <input type="text" id="channel-niche" placeholder="e.g., cooking, gaming, tech reviews">
+                            </div>
+                            <div class="input-group">
+                                <label for="name-style">Name Style</label>
+                                <select id="name-style">
+                                    <option value="creative">Creative</option>
+                                    <option value="professional">Professional</option>
+                                    <option value="fun">Fun</option>
+                                    <option value="personal">Personal</option>
+                                </select>
+                            </div>
+                            <button class="generate-btn" id="generate-names">Generate Names</button>
+                            <div class="result-container" id="name-results" style="display: none;">
+                                <h3>Suggested Channel Names:</h3>
+                                <div id="name-output"></div>
+                                <div class="result-actions">
+                                    <button class="copy-btn" id="copy-names">Copy Names</button>
+                                    <button class="generate-again-btn">Generate Again</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Idea Generator Tool -->
+                    <div class="tool-content" id="video-idea-generator">
+                        <div class="tool-header">
+                            <h2><i class="fas fa-lightbulb"></i> YouTube Video Idea Generator</h2>
+                            <button class="back-btn"><i class="fas fa-arrow-left"></i> Back to Tools</button>
+                        </div>
+                        <div class="tool-container">
+                            <div class="input-group">
+                                <label for="idea-niche">Channel Niche</label>
+                                <input type="text" id="idea-niche" placeholder="e.g., fitness, beauty, finance">
+                            </div>
+                            <div class="input-group">
+                                <label for="idea-count">Number of Ideas</label>
+                                <select id="idea-count">
+                                    <option value="5">5</option>
+                                    <option value="10" selected>10</option>
+                                    <option value="15">15</option>
+                                </select>
+                            </div>
+                            <button class="generate-btn" id="generate-ideas">Generate Ideas</button>
+                            <div class="result-container" id="idea-results" style="display: none;">
+                                <h3>Video Ideas:</h3>
+                                <div id="idea-output"></div>
+                                <div class="result-actions">
+                                    <button class="copy-btn" id="copy-ideas">Copy Ideas</button>
+                                    <button class="generate-again-btn">Generate Again</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SEO Score Checker Tool -->
+                    <div class="tool-content" id="seo-score-checker">
+                        <div class="tool-header">
+                            <h2><i class="fas fa-chart-line"></i> YouTube SEO Score Checker</h2>
+                            <button class="back-btn"><i class="fas fa-arrow-left"></i> Back to Tools</button>
+                        </div>
+                        <div class="tool-container">
+                            <div class="input-group">
+                                <label for="seo-url">YouTube Video URL</label>
+                                <input type="text" id="seo-url" placeholder="https://www.youtube.com/watch?v=...">
+                            </div>
+                            <button class="generate-btn" id="check-seo">Check SEO Score</button>
+                            <div class="result-container" id="seo-results" style="display: none;">
+                                <h3>SEO Analysis:</h3>
+                                <div id="seo-output"></div>
+                                <div id="seo-score"></div>
+                                <div class="result-actions">
+                                    <button class="generate-again-btn">Analyze Another Video</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upload Time Optimizer Tool -->
+                    <div class="tool-content" id="upload-time-optimizer">
+                        <div class="tool-header">
+                            <h2><i class="fas fa-clock"></i> YouTube Upload Time Optimizer</h2>
+                            <button class="back-btn"><i class="fas fa-arrow-left"></i> Back to Tools</button>
+                        </div>
+                        <div class="tool-container">
+                            <div class="input-group">
+                                <label for="channel-country">Channel's Primary Audience Country</label>
+                                <select id="channel-country">
+                                    <option value="us">United States</option>
+                                    <option value="uk">United Kingdom</option>
+                                    <option value="ca">Canada</option>
+                                    <option value="au">Australia</option>
+                                    <option value="in">India</option>
+                                    <option value="br">Brazil</option>
+                                    <option value="de">Germany</option>
+                                    <option value="fr">France</option>
+                                    <option value="jp">Japan</option>
+                                    <option value="mx">Mexico</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="content-type">Content Type</label>
+                                <select id="content-type">
+                                    <option value="entertainment">Entertainment</option>
+                                    <option value="education">Education</option>
+                                    <option value="gaming">Gaming</option>
+                                    <option value="vlog">Vlog</option>
+                                    <option value="tutorial">Tutorial</option>
+                                    <option value="review">Review</option>
+                                </select>
+                            </div>
+                            <button class="generate-btn" id="optimize-time">Optimize Upload Time</button>
+                            <div class="result-container" id="time-results" style="display: none;">
+                                <h3>Recommended Upload Times:</h3>
+                                <div id="time-output"></div>
+                                <div class="result-actions">
+                                    <button class="generate-again-btn">Generate Again</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Script Intro Generator Tool -->
+                    <div class="tool-content" id="script-intro-generator">
+                        <div class="tool-header">
+                            <h2><i class="fas fa-scroll"></i> YouTube Script Intro Generator</h2>
+                            <button class="back-btn"><i class="fas fa-arrow-left"></i> Back to Tools</button>
+                        </div>
+                        <div class="tool-container">
+                            <div class="input-group">
+                                <label for="script-topic">Video Topic</label>
+                                <input type="text" id="script-topic" placeholder="e.g., iPhone 13 review, keto diet">
+                            </div>
+                            <div class="input-group">
+                                <label for="script-style">Intro Style</label>
+                                <select id="script-style">
+                                    <option value="engaging">Engaging/Hook</option>
+                                    <option value="humorous">Humorous</option>
+                                    <option value="dramatic">Dramatic</option>
+                                    <option value="straightforward">Straightforward</option>
+                                </select>
+                            </div>
+                            <button class="generate-btn" id="generate-intro">Generate Intro</button>
+                            <div class="result-container" id="intro-results" style="display: none;">
+                                <h3>Video Intro Script:</h3>
+                                <div id="intro-output"></div>
+                                <div class="result-actions">
+                                    <button class="copy-btn" id="copy-intro">Copy Script</button>
+                                    <button class="generate-again-btn">Generate Again</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thumbnail Text Suggester Tool -->
+                    <div class="tool-content" id="thumbnail-text-suggester">
+                        <div class="tool-header">
+                            <h2><i class="fas fa-image"></i> Thumbnail Text Suggester</h2>
+                            <button class="back-btn"><i class="fas fa-arrow-left"></i> Back to Tools</button>
+                        </div>
+                        <div class="tool-container">
+                            <div class="input-group">
+                                <label for="thumbnail-topic">Video Topic</label>
+                                <input type="text" id="thumbnail-topic" placeholder="e.g., morning routine, budget travel">
+                            </div>
+                            <div class="input-group">
+                                <label for="thumbnail-style">Text Style</label>
+                                <select id="thumbnail-style">
+                                    <option value="bold">Bold Statement</option>
+                                    <option value="question">Question</option>
+                                    <option value="number">Number/List</option>
+                                    <option value="shocking">Shocking Fact</option>
+                                </select>
+                            </div>
+                            <button class="generate-btn" id="generate-thumbnail-text">Generate Text</button>
+                            <div class="result-container" id="thumbnail-results" style="display: none;">
+                                <h3>Thumbnail Text Suggestions:</h3>
+                                <div id="thumbnail-output"></div>
+                                <div class="result-actions">
+                                    <button class="copy-btn" id="copy-thumbnail">Copy Text</button>
+                                    <button class="generate-again-btn">Generate Again</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>Popular Tools</h3>
+                    <div class="popular-tools">
+                        <ul>
+                            <li><a href="#" data-tool="title-generator">Title Generator</a></li>
+                            <li><a href="#" data-tool="description-writer">Description Writer</a></li>
+                            <li><a href="#" data-tool="hashtag-generator">Hashtag Generator</a></li>
+                            <li><a href="#" data-tool="video-idea-generator">Video Idea Generator</a></li>
+                            <li><a href="#" data-tool="seo-score-checker">SEO Score Checker</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget ad-banner">
+                    <p>Advertisement</p>
+                    <!-- Google AdSense Sidebar Ad -->
+                    <div id="sidebar-ad">
+                        <!-- AdSense code will be inserted here -->
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+                            crossorigin="anonymous"></script>
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                            data-ad-slot="XXXXXXXXXX"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>YouTube SEO Tips</h3>
+                    <ul>
+                        <li>Use your main keyword in the first 60 characters of your title</li>
+                        <li>Place important links in the first 3 lines of your description</li>
+                        <li>Use 3-5 relevant hashtags in your description</li>
+                        <li>Keep your tags relevant and specific to your content</li>
+                        <li>Engage with comments to boost your video's visibility</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <div class="ad-banner">
+            <p>Advertisement</p>
+            <!-- Google AdSense Bottom Banner Ad -->
+            <div id="bottom-banner-ad">
+                <!-- AdSense code will be inserted here -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+                    crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                    data-ad-slot="XXXXXXXXXX"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li><a href="#" data-tool="title-generator">Title Generator</a></li>
+                        <li><a href="#" data-tool="description-writer">Description Writer</a></li>
+                        <li><a href="#" data-tool="hashtag-generator">Hashtag Generator</a></li>
+                        <li><a href="#" data-tool="tag-extractor">Tag Extractor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">YouTube SEO Guide</a></li>
+                        <li><a href="#">Video Marketing Tips</a></li>
+                        <li><a href="#">Content Strategy</a></li>
+                        <li><a href="#">Analytics Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 YouTube SEO Assistant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tool navigation
+            const toolCards = document.querySelectorAll('.tool-card');
+            const toolLinks = document.querySelectorAll('[data-tool]');
+            const toolsHome = document.getElementById('tools-home');
+            const toolContentContainer = document.getElementById('tool-content-container');
+            const backButtons = document.querySelectorAll('.back-btn');
+            const searchInput = document.querySelector('.search-bar input');
+            const generateAgainButtons = document.querySelectorAll('.generate-again-btn');
+
+            // Show tool content when a tool is clicked
+            function showTool(toolId) {
+                toolsHome.style.display = 'none';
+                toolContentContainer.style.display = 'block';
+                
+                // Hide all tool contents
+                document.querySelectorAll('.tool-content').forEach(tool => {
+                    tool.classList.remove('active');
+                });
+                
+                // Show selected tool
+                document.getElementById(toolId).classList.add('active');
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            // Add click event to all tool cards and links
+            toolCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const toolId = this.getAttribute('data-tool');
+                    showTool(toolId);
+                });
+            });
+
+            toolLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const toolId = this.getAttribute('data-tool');
+                    showTool(toolId);
+                });
+            });
+
+            // Back to tools functionality
+            backButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    toolsHome.style.display = 'block';
+                    toolContentContainer.style.display = 'none';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
+
+            // Search functionality
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                toolCards.forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const description = card.querySelector('p').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+
+            // Generate Again buttons
+            generateAgainButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const toolContainer = this.closest('.tool-content');
+                    const resultContainer = toolContainer.querySelector('.result-container');
+                    resultContainer.style.display = 'none';
+                });
+            });
+
+            // Copy buttons
+            document.querySelectorAll('.copy-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const toolContainer = this.closest('.tool-content');
+                    const outputElement = toolContainer.querySelector('.result-container div:not(.result-actions)');
+                    
+                    // Create temporary textarea to copy text
+                    const textarea = document.createElement('textarea');
+                    textarea.value = outputElement.textContent;
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                    
+                    // Show copied feedback
+                    const originalText = this.textContent;
+                    this.textContent = 'Copied!';
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                    }, 2000);
+                });
+            });
+
+            // Tool-specific functionality
+            // Title Generator
+            document.getElementById('generate-titles').addEventListener('click', function() {
+                const keywords = document.getElementById('title-keywords').value.trim();
+                const tone = document.getElementById('title-tone').value;
+                
+                if (!keywords) {
+                    alert('Please enter some keywords');
+                    return;
+                }
+                
+                const titles = generateTitles(keywords, tone);
+                const output = document.getElementById('title-output');
+                output.innerHTML = titles.map(title => `<p>${title}</p>`).join('');
+                
+                document.getElementById('title-results').style.display = 'block';
+            });
+
+            function generateTitles(keywords, tone) {
+                const templates = {
+                    informative: [
+                        `The Complete Guide to ${keywords}`,
+                        `${keywords} Explained: What You Need to Know`,
+                        `How ${keywords} Works: A Detailed Explanation`,
+                        `Understanding ${keywords}: The Essential Guide`,
+                        `The Science Behind ${keywords}`
+                    ],
+                    clickbait: [
+                        `This ${keywords} Trick Will Blow Your Mind!`,
+                        `You Won't Believe This ${keywords} Hack!`,
+                        `10 ${keywords} Secrets They Don't Want You to Know`,
+                        `The Shocking Truth About ${keywords}`,
+                        `I Tried ${keywords} For 30 Days - Here's What Happened`
+                    ],
+                    question: [
+                        `Is ${keywords} Really Worth It?`,
+                        `Why Does ${keywords} Matter?`,
+                        `How Can ${keywords} Help You?`,
+                        `What's the Best Way to ${keywords}?`,
+                        `Are You Making These ${keywords} Mistakes?`
+                    ],
+                    list: [
+                        `10 Best ${keywords} Tips You Should Know`,
+                        `7 Ways to Improve Your ${keywords}`,
+                        `5 ${keywords} Hacks That Actually Work`,
+                        `15 ${keywords} Ideas You Need to Try`,
+                        `3 Simple Steps to Master ${keywords}`
+                    ],
+                    howto: [
+                        `How to ${keywords} Like a Pro`,
+                        `The Beginner's Guide to ${keywords}`,
+                        `Step-by-Step: How to ${keywords}`,
+                        `How I Learned to ${keywords} in 7 Days`,
+                        `How to ${keywords} the Right Way`
+                    ]
+                };
+                
+                return templates[tone] || templates.informative;
+            }
+
+            // Description Writer
+            document.getElementById('generate-description').addEventListener('click', function() {
+                const keywords = document.getElementById('desc-keywords').value.trim();
+                const details = document.getElementById('desc-details').value.trim();
+                
+                if (!keywords) {
+                    alert('Please enter your video topic');
+                    return;
+                }
+                
+                const description = generateDescription(keywords, details);
+                document.getElementById('description-output').textContent = description;
+                document.getElementById('description-results').style.display = 'block';
+            });
+
+            function generateDescription(keywords, details) {
+                let description = `In this video, we'll explore ${keywords} and everything you need to know about it.\n\n`;
+                
+                if (details) {
+                    description += `${details}\n\n`;
+                }
+                
+                description += `🔔 Subscribe for more content about ${keywords}: [Channel URL]\n\n`;
+                description += `📌 Video Chapters:\n00:00 Introduction\n00:30 Main Content\n03:45 Key Takeaways\n05:00 Conclusion\n\n`;
+                description += `#${keywords.replace(/\s+/g, '')} #YouTubeSEO #ContentCreation`;
+                
+                return description;
+            }
+
+            // Hashtag Generator
+            document.getElementById('generate-hashtags').addEventListener('click', function() {
+                const topic = document.getElementById('hashtag-topic').value.trim();
+                const count = parseInt(document.getElementById('hashtag-count').value);
+                
+                if (!topic) {
+                    alert('Please enter a topic');
+                    return;
+                }
+                
+                const hashtags = generateHashtags(topic, count);
+                document.getElementById('hashtag-output').textContent = hashtags.join(' ');
+                document.getElementById('hashtag-results').style.display = 'block';
+            });
+
+            function generateHashtags(topic, count) {
+                const baseHashtags = [
+                    `#${topic.replace(/\s+/g, '')}`,
+                    `#${topic.replace(/\s+/g, '')}Tips`,
+                    `#${topic.replace(/\s+/g, '')}Tutorial`,
+                    `#Learn${topic.replace(/\s+/g, '')}`,
+                    `#${topic.replace(/\s+/g, '')}Video`
+                ];
+                
+                const generalHashtags = [
+                    '#YouTube', '#Video', '#ContentCreator', '#Subscribe', '#LikeAndSubscribe',
+                    '#NewVideo', '#Trending', '#Viral', '#WatchThis', '#MustWatch'
+                ];
+                
+                // Combine and limit to requested count
+                return [...baseHashtags, ...generalHashtags].slice(0, count);
+            }
+
+            // Channel Name Generator
+            document.getElementById('generate-names').addEventListener('click', function() {
+                const niche = document.getElementById('channel-niche').value.trim();
+                const style = document.getElementById('name-style').value;
+                
+                if (!niche) {
+                    alert('Please enter your channel niche');
+                    return;
+                }
+                
+                const names = generateChannelNames(niche, style);
+                const output = document.getElementById('name-output');
+                output.innerHTML = names.map(name => `<p>${name}</p>`).join('');
+                
+                document.getElementById('name-results').style.display = 'block';
+            });
+
+            function generateChannelNames(niche, style) {
+                const styles = {
+                    creative: [
+                        `${niche} Vibes`,
+                        `The ${niche} Lab`,
+                        `${niche} Universe`,
+                        `${niche} Express`,
+                        `${niche} Junction`
+                    ],
+                    professional: [
+                        `${niche} Pro`,
+                        `${niche} Mastery`,
+                        `The ${niche} Guide`,
+                        `${niche} Academy`,
+                        `${niche} Insights`
+                    ],
+                    fun: [
+                        `${niche} Time`,
+                        `${niche} Party`,
+                        `${niche} Fanatics`,
+                        `${niche} Lovers`,
+                        `${niche} Nation`
+                    ],
+                    personal: [
+                        `My ${niche} Journey`,
+                        `${niche} With Me`,
+                        `${niche} Diaries`,
+                        `The ${niche} Guy`,
+                        `${niche} Queen`
+                    ]
+                };
+                
+                return styles[style] || styles.creative;
+            }
+
+            // Video Idea Generator
+            document.getElementById('generate-ideas').addEventListener('click', function() {
+                const niche = document.getElementById('idea-niche').value.trim();
+                const count = parseInt(document.getElementById('idea-count').value);
+                
+                if (!niche) {
+                    alert('Please enter your channel niche');
+                    return;
+                }
+                
+                const ideas = generateVideoIdeas(niche, count);
+                const output = document.getElementById('idea-output');
+                output.innerHTML = ideas.map(idea => `<p>${idea}</p>`).join('');
+                
+                document.getElementById('idea-results').style.display = 'block';
+            });
+
+            function generateVideoIdeas(niche, count) {
+                const templates = [
+                    `How to Start With ${niche}`,
+                    `Common ${niche} Mistakes to Avoid`,
+                    `My ${niche} Routine`,
+                    `The Best ${niche} Tools`,
+                    `${niche} for Beginners`,
+                    `Advanced ${niche} Techniques`,
+                    `${niche} Q&A Session`,
+                    `${niche} Review`,
+                    `${niche} Comparison`,
+                    `Why I Love ${niche}`,
+                    `${niche} Challenge`,
+                    `${niche} Transformation`,
+                    `The Truth About ${niche}`,
+                    `${niche} Myths Debunked`,
+                    `How I Make Money With ${niche}`,
+                    `${niche} Setup Tour`,
+                    `Reacting to ${niche} Videos`,
+                    `${niche} Tips and Tricks`,
+                    `The History of ${niche}`,
+                    `Future of ${niche}`
+                ];
+                
+                // Shuffle and return requested count
+                return templates.sort(() => 0.5 - Math.random()).slice(0, count);
+            }
+
+            // SEO Score Checker
+            document.getElementById('check-seo').addEventListener('click', function() {
+                const url = document.getElementById('seo-url').value.trim();
+                
+                if (!url) {
+                    alert('Please enter a YouTube video URL');
+                    return;
+                }
+                
+                // Simulate checking SEO score
+                setTimeout(() => {
+                    const score = Math.floor(Math.random() * 41) + 60; // Random score between 60-100
+                    const analysis = generateSeoAnalysis(score);
+                    
+                    document.getElementById('seo-output').innerHTML = analysis;
+                    document.getElementById('seo-score').innerHTML = `
+                        <div style="background: linear-gradient(90deg, #ff0000 ${score}%, #333 ${score}%); 
+                        padding: 10px; border-radius: 5px; text-align: center; margin: 15px 0; font-weight: bold;">
+                            SEO Score: ${score}/100
+                        </div>
+                    `;
+                    
+                    document.getElementById('seo-results').style.display = 'block';
+                }, 1500);
+            });
+
+            function generateSeoAnalysis(score) {
+                const improvements = [
+                    'Try to include your main keyword in the first 60 characters of your title',
+                    'Add more relevant tags to help YouTube understand your content',
+                    'Consider adding timestamps to your description',
+                    'Include a call-to-action in your video and description',
+                    'Add more hashtags (3-5 is optimal)'
+                ].sort(() => 0.5 - Math.random()).slice(0, 3);
+                
+                const strengths = [
+                    'Great title length (under 60 characters)',
+                    'Good description length',
+                    'Effective use of keywords',
+                    'Strong thumbnail design',
+                    'Good engagement metrics'
+                ].sort(() => 0.5 - Math.random()).slice(0, 2);
+                
+                let html = '<h4>Strengths:</h4><ul>';
+                strengths.forEach(strength => {
+                    html += `<li>${strength}</li>`;
+                });
+                
+                html += '</ul><h4>Areas for Improvement:</h4><ul>';
+                improvements.forEach(improvement => {
+                    html += `<li>${improvement}</li>`;
+                });
+                
+                html += '</ul>';
+                return html;
+            }
+
+            // Upload Time Optimizer
+            document.getElementById('optimize-time').addEventListener('click', function() {
+                const country = document.getElementById('channel-country').value;
+                const contentType = document.getElementById('content-type').value;
+                
+                const times = generateUploadTimes(country, contentType);
+                const output = document.getElementById('time-output');
+                output.innerHTML = times.map(time => `<p>${time}</p>`).join('');
+                
+                document.getElementById('time-results').style.display = 'block';
+            });
+
+            function generateUploadTimes(country, contentType) {
+                const countryTimes = {
+                    us: ['9:00 AM - 11:00 AM EST', '2:00 PM - 4:00 PM EST', '7:00 PM - 9:00 PM EST'],
+                    uk: ['8:00 AM - 10:00 AM GMT', '1:00 PM - 3:00 PM GMT', '6:00 PM - 8:00 PM GMT'],
+                    ca: ['9:00 AM - 11:00 AM EST', '2:00 PM - 4:00 PM EST', '7:00 PM - 9:00 PM EST'],
+                    au: ['7:00 AM - 9:00 AM AEST', '12:00 PM - 2:00 PM AEST', '5:00 PM - 7:00 PM AEST'],
+                    in: ['10:00 AM - 12:00 PM IST', '3:00 PM - 5:00 PM IST', '8:00 PM - 10:00 PM IST']
+                };
+                
+                const contentTimes = {
+                    entertainment: ['Evening times typically perform best'],
+                    education: ['Morning and early afternoon times work well'],
+                    gaming: ['After school/work hours are ideal'],
+                    vlog: ['Weekend mornings and weekday evenings'],
+                    tutorial: ['Weekday afternoons'],
+                    review: ['Evenings and weekends']
+                };
+                
+                return [
+                    ...(countryTimes[country] || countryTimes.us),
+                    ...(contentTimes[contentType] || [])
+                ];
+            }
+
+            // Script Intro Generator
+            document.getElementById('generate-intro').addEventListener('click', function() {
+                const topic = document.getElementById('script-topic').value.trim();
+                const style = document.getElementById('script-style').value;
+                
+                if (!topic) {
+                    alert('Please enter a video topic');
+                    return;
+                }
+                
+                const intro = generateScriptIntro(topic, style);
+                document.getElementById('intro-output').textContent = intro;
+                document.getElementById('intro-results').style.display = 'block';
+            });
+
+            function generateScriptIntro(topic, style) {
+                const styles = {
+                    engaging: `"Did you know that ${topic} could change everything? Stick around because today I'm going to show you exactly why ${topic} matters more than you think!"`,
+                    humorous: `"Okay, I have a confession to make... I might be slightly obsessed with ${topic}. But can you blame me? Today we're diving deep into the world of ${topic} and trust me, you're in for a treat!"`,
+                    dramatic: `"What if I told you that everything you know about ${topic} is wrong? In this video, we're uncovering the shocking truth about ${topic} that no one's talking about."`,
+                    straightforward: `"Welcome back to the channel. Today we're talking about ${topic}. I'll cover the basics, share some tips, and give you my honest opinion. Let's get started."`
+                };
+                
+                return styles[style] || styles.engaging;
+            }
+
+            // Thumbnail Text Suggester
+            document.getElementById('generate-thumbnail-text').addEventListener('click', function() {
+                const topic = document.getElementById('thumbnail-topic').value.trim();
+                const style = document.getElementById('thumbnail-style').value;
+                
+                if (!topic) {
+                    alert('Please enter a video topic');
+                    return;
+                }
+                
+                const texts = generateThumbnailTexts(topic, style);
+                const output = document.getElementById('thumbnail-output');
+                output.innerHTML = texts.map(text => `<p>${text}</p>`).join('');
+                
+                document.getElementById('thumbnail-results').style.display = 'block';
+            });
+
+            function generateThumbnailTexts(topic, style) {
+                const styles = {
+                    bold: [
+                        `YOU NEED THIS ${topic.toUpperCase()}!`,
+                        `THE BEST ${topic.toUpperCase()} GUIDE`,
+                        `${topic.toUpperCase()} SECRETS REVEALED`
+                    ],
+                    question: [
+                        `Can You Handle This ${topic}?`,
+                        `Is ${topic} Worth It?`,
+                        `Why Does ${topic} Matter?`
+                    ],
+                    number: [
+                        `5 ${topic} Hacks You Need`,
+                        `10 ${topic} Tips for Success`,
+                        `3 ${topic} Mistakes to Avoid`
+                    ],
+                    shocking: [
+                        `I Can't Believe This ${topic} Trick!`,
+                        `${topic} Hack That Changed Everything`,
+                        `The Truth About ${topic} Will Shock You`
+                    ]
+                };
+                
+                return styles[style] || styles.bold;
+            }
+        });
+    </script>
+</body>
+</html>
